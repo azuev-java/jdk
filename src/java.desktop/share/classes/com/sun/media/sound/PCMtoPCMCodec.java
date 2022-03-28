@@ -400,7 +400,7 @@ public final class PCMtoPCMCodec extends FormatConversionProvider {
             // set the audio stream length in frames if we know it
 
             frameSize = inputFormat.getFrameSize();
-            if( frameSize == AudioSystem.NOT_SPECIFIED ) {
+            if( frameSize < 1 ) {
                 frameSize=1;
             }
             if( stream instanceof AudioInputStream ) {
